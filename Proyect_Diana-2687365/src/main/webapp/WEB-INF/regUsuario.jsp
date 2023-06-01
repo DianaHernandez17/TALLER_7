@@ -1,11 +1,6 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.Calendar" %><%--
-  Created by IntelliJ IDEA.
-  User: APRENDIZ
-  Date: 30/05/2023
-  Time: 11:38 a. m.
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -25,7 +20,7 @@
     <!-- TITLE-->
     <title>Registro Usuario</title>
     <!-- FAVICON-->
-    <link rel="icon" type="image/x-icon" href="./img/imagen.png">
+    <link rel="icon" type="image/x-icon" href="./img/registrarse.png">
     <!-- bootstrap css / icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -41,35 +36,35 @@
 <!-- login form -->
 <main class="form-signin w-100 m-auto" class="text-center">
     <form action="registerUser" method="post">
-        <img class="mb-4" src="./img/imagen.png" alt="MY APP" width=100>
-        <h4 class="text-secondary">CarUnity</h4>
-        <h1 class="h5 mb-3 fw-normal">Ingresar</h1>
+        <img class="mb-4" src="./img/regitrarse.png" alt="MY APP" width=100>
+        <h4 class="text-secondary"> REGISTER</h4>
+        <h1 class="h5 mb-3 fw-normal">INGRESAR:</h1>
         <div class="form-floating">
             <input type="text" name="user_firstname" class="form-control" id="floatingFirstName" placeholder="Ingrese su Apellido" required
                    pattern="[A-Za-z ]{2,40}">
-            <label for="floatingFirstName">Nombres:</label>
+            <label for="floatingFirstName">NOMBRES:</label>
             <div class="form-floating">
                 <input type="text" name="user_lastname" class="form-control" id="floatingLastName" placeholder="Ingrese su Apellido" required
                        pattern="[A-Za-z ]{2,40}">
-                <label for="floatingLastName">Apellidos:</label>
+                <label for="floatingLastName">APELLIDOS:</label>
             </div>
             <div class="form-floating">
                 <input type="text" name="user_email" class="form-control" id="floatingEmail"
                        placeholder="Ingrese su email"  required
                        pattern="{60}">
-                <label for="floatingEmail">Email: </label>
+                <label for="floatingEmail">EMAIL: </label>
             </div>
             <div class="form-floating">
                 <input type="password" name="user_password" class="form-control" id="floatingPassword"
                        placeholder="Ingrese su contraseña" required pattern="[A-Za-20-91(8, 12}">
-                <label for="floatingPassword">Contraseña: </label>
+                <label for="floatingPassword">CONTRASEÑA: </label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">ENVIAR</button>
             <div id="register">
-                <a href="product.jsp">Registrar producto</a>
-                <a href="category.jsp">Registrar categoria</a>
+                <a href="product.jsp">REGISTRAR PRODUCTO </a>
+                <a href="category.jsp">REGISTRAR CATEGORÍA</a>
             </div>
-            <p class="mt-3 mb-3 text-muted">Todos los Derechos Reservados CarUnity ©<%=displayDate()%>
+            <p class="mt-3 mb-3 text-muted">TODOS LOS DERECHOS RESERVADOS. ©<%=displayDate()%>
             </p>
         </div>
     </form>

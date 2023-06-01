@@ -1,11 +1,8 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
-<%@ page import="java.util.Calendar" %><%--
-  Created by IntelliJ IDEA.
-  User: APRENDIZ
-  Date: 30/05/2023
-  Time: 11:36 a. m.
-  To change this template use File | Settings | File Templates.
+<%@ page import="java.util.Calendar" %>
+<%@ page import="com.mysql.cj.x.protobuf.MysqlxDatatypes" %><%--
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -19,13 +16,13 @@
     <!--Description -->
     <meta name="description" content="Esta debe ser una informacion que aparece en el parrafo que acompaña los resultados de una busqueda en Internet.">
     <!--Keywords-->
-    <meta name="keywords" content="registro Usuario ,formulario de registro ,crear cuenta , registro en linea">
+    <meta name="keywords" content="Registro Usuario , Formulario de registro ,Crear cuenta , Registro en linea">
     <!-- minium responsive viewport-->
     <meta name="viewport" content="width=devide-width, initial-scale=1">
     <!-- TITLE-->
-    <title>Registro Categoria</title>
+    <title>REGISTRO CATEGORÍA</title>
     <!-- FAVICON-->
-    <link rel="icon" type="image/x-icon" href="./img/imagen.png">
+    <link rel="icon" type="image/x-icon" href="./img/registrarse">
     <!-- bootstrap css / icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -42,17 +39,17 @@
 <main class="form-signin w-100 m-auto" class="text-center">
     <form action="registerCategory" method="post">
         <img class="mb-4" src="./img/imagen.png" alt="CarUnity" width=100>
-        <h4 class="text-secondary">CarUnity-Category</h4>
-        <h1 class="h5 mb-3 fw-normal">Ingresar</h1>
+        <h4 class="text-secondary"> Register Category</h4>
+        <h1 class="h5 mb-3 fw-normal">INGRESAR: </h1>
         <div class="form-floating">
-            <input type="text" name="category_name" class="form-control" id="floatingName" placeholder="Ingrese el Nombre de la Categoria" required
+            <input type="text" name="category_name" class="form-control" id="floatingName" placeholder="Por favor, Ingrese el nombre de la categoría" required
                    pattern="[A-Za-z ]{2,40}">
-            <label for="floatingName">Nombre:</label>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
+            <label for="floatingName">NOMBRE:</label>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">ENVIAR</button>
             <div id="register">
-                <a href="form.jsp">Registrarse</a>
+                <a href="form.jsp">REGISTRARSE</a>
             </div>
-            <p class="mt-3 mb-3 text-muted">Todos los Derechos Reservados CarUnity ©<%=displayDate()%>
+            <p class="mt-3 mb-3 text-muted">TODOS LOS DERECHOS RESERVADOS. ©<%=displayDate()%>
             </p>
         </div>
     </form>

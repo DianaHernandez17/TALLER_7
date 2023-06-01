@@ -13,7 +13,7 @@ public class UseBasicConnectionSingleton {
              Statement stmt =
                      conn.createStatement();
              ResultSet rs =
-                     stmt.executeQuery("SELECT * FROM my_app.users_tbl")) {
+                     stmt.executeQuery("SELECT * FROM project365.users_tbl")) {
  while (rs.next()) {
 
             System.out.print(rs.getString("user_firstname"));

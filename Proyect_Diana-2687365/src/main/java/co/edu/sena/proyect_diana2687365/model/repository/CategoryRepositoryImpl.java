@@ -52,17 +52,16 @@ public class CategoryRepositoryImpl implements Repository<Category> {
 
         if(category.getCategory_id() != null && category.getCategory_id() > 0){
             sql ="update Category_tbl, category_name = ?"+
-                    "category_password = aes_encrypt(?,'$2a$12$MvnynbqUim5hG4ub/Kh4y.lVIPK3FhJVPAX7sf9zftHc/e0E.tA/S')"+
                     "where category_id=?";
         } else {
-            sql = "insert into Category_tbl(category_name, category_id)"+
-                    "values(upper(?), upper(?), lower(?),"+
-                    "aes_encrypt(?,'$2a$12$MvnynbqUim5hG4ub/Kh4y.lVIPK3FhJVPAX7sf9zftHc/e0E.tA/S'))";
+            sql = "insert into Category_tbl(category_name)"+
+                    "values(upper(?), upper(?), lower(?),";
+
         }
         try(Connection conn = ConnectionPool.getConnection();
             PreparedStatement ps= conn.prepareStatement(sql)){
             ps.setString(1, category.getCategory_name());
-            if (category.getCategory_id() != null && category.getCategory_id()> 0){
+            if (category.getCategory_id() != null){
                 ps.setInt(2, category.getCategory_id());
             }
             rowsAffected = ps.executeUpdate();
@@ -72,11 +71,20 @@ public class CategoryRepositoryImpl implements Repository<Category> {
 
     @Override
     public void deleteObj(Integer id) throws SQLException {
-
+        sql="delete from Category_tbl where user_id=?";
+        try(Connection conn= ConnectionPool.getConnection();
+            PreparedStatement ps =conn.prepareStatement(sql)){
+            ps.setInt(1,id);
+            ps.executeUpdate();
+        }//Try
     }
+
 
     @Override
     public Category createObj(ResultSet rs) throws SQLException {
+        Category category = new Category();
+        category.setCategory_id(rs.getInt("category_id"));
+        category.setCategory_firstname(rs.getString("category_firstname"));
         return null;
     }
 

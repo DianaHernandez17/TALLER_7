@@ -44,6 +44,6 @@ public class UserRegisterServlet extends HttpServlet {
             System.out.println("Registro exitoso!");
         }
 
-        //todo write the message back to the page in client browser
+        //
     }
 }

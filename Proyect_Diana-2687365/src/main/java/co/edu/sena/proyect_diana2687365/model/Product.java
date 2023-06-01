@@ -1,44 +1,60 @@
 package co.edu.sena.proyect_diana2687365.model;
 
 public class Product {
-
     private Integer product_id;
     private String product_name;
-    private String product_value;
-
-
+    private float product_value;
+    private Integer category_id;
 
     public Product() {
     }
-    public Product(Integer product_id) {
-            this.product_id = product_id;
-        }
 
-    public static void add(Product u) {
+    public Product(Integer product_id, String product_name, Float product_value, Integer category_id) {
+        this.product_id = product_id;
+        this.product_name = product_name;
+        this.product_value = product_value;
+        this.category_id = category_id;
+    }
+
+    public Product(String product_name, Float product_value, Integer category_id) {
+        this.product_name = product_name;
+        this.product_value = product_value;
+        this.category_id = category_id;
+    }
+
+    public static void add(Product p) {
     }
 
     public Integer getProduct_id() {
         return product_id;
     }
 
-    public String getProduct_name() {
-        return product_name;
-    }
-
-    public String getProduct_value() {
-        return product_value;
-    }
-
     public void setProduct_id(Integer product_id) {
         this.product_id = product_id;
+    }
+
+    public String getProduct_name() {
+        return product_name;
     }
 
     public void setProduct_name(String product_name) {
         this.product_name = product_name;
     }
 
-    public void setProduct_value(String product_value) {
+    public float getProduct_value() {
+        return product_value;
+    }
+
+    public void setProduct_value(float product_value) {
         this.product_value = product_value;
+    }
+
+    public Integer getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(Integer category_id) {
+        this.category_id = category_id;
     }
 
     @Override
@@ -46,7 +62,9 @@ public class Product {
         return "Product{" +
                 "product_id=" + product_id +
                 ", product_name='" + product_name + '\'' +
-                ", product_value='" + product_value + '\'' +
+                ", product_value=" + product_value +
+                ", category_id=" + category_id +
                 '}';
     }
 }
+
